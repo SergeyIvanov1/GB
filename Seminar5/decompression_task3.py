@@ -52,5 +52,5 @@ def decompression():
 decompression()
 
 # example:
-# task: 2s-5nhhgh3s3l3k-1h
-# result: ssnhhghssslllkkkh
+# task_decompression -5fmnsf7j8k-1i6v6s6j8r
+# solution: fmnsfjjjjjjjkkkkkkkkivvvvvvssssssjjjjjjrrrrrrrr

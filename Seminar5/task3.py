@@ -5,6 +5,7 @@
 
 file = open('Seminar5/input.txt', 'r')
 init_str = file.readline()
+# print(init_str)
 
 intermediate_result = ''
 count_positive = 1
@@ -23,6 +24,8 @@ intermediate_result = intermediate_result + str(count_positive) + char_of_str
 
 result = ''
 count_negative = -1
+
+# print(intermediate_result)
 
 for k in intermediate_result:
     if k.isdigit():
@@ -46,11 +49,12 @@ if (count_negative != -1):
 if (count_negative == -1 and ('*' in result)):
     result = result.replace('*', str(count_negative))
 
+# print(result)
 file = open('Seminar5/output.txt', 'w')
 file.write(result)
 
 # example:
-# task: ssvbsxdbfghghssslllkkkh2s-5nhhgh3s3l3k-1h
-# result: 2s-11vbsxdbfghgh3s3l3k-1h
+# task_compression: fmnsfjjjjjjjkkkkkkkkivvvvvvssssssjjjjjjrrrrrrrr
+# solution: -5fmnsf7j8k-1i6v6s6j8r
 
 
