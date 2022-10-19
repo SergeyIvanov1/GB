@@ -1,63 +1,41 @@
-# Задание в группах: Создать телефонный справочник с возможностью импорта и экспорта данных в нескольких форматах.
-# - под форматами понимаем структуру файлов, 
-# например: в файле на одной строке хранится одна часть записи, разделитель - пустая строка:
-# Фамилия_1
+import codecs
+import logger
 
-# Имя_1
+def choose_format():
+    choose = int(input('Choose a format - how to write data:\n 1. Vertical\n 2. Horizontal\n'))
+    return choose
 
-# Телефон_1
+def inputing_data():
+    data = []
+    data.append(input('input last_name = '))
+    data.append(input('input first_name = '))
+    data.append(input('input patronymic = '))
+    data.append(input('input description = '))
+    logger.info('inputting data')
+    return data    
 
-# Описание_1
+def write_data_to_file():
+    format = choose_format()
+    data = inputing_data()
+    path1 = 'Seminar7/format1.txt'
+    path2 = 'Seminar7/format2.txt'
 
-# Фамилия_2    
-# Имя_2    
-# Телефон_2    
-# Описание_2    
-# и т.д.
+    if format == 1:
+        file = codecs.open(path1, 'a', 'utf-8')
+        [file.write(i + '\n') for i in data]
+        file.write('\n')
+        logger.info('write data to file ' + path1)
+    elif format == 2:
+        file = codecs.open(path2, 'a', 'utf-8')
+        file.write(','.join(data))
+        file.write('\n')
+        logger.info('write data to file ' + path2)
+    file.close()
 
-# в файле на одной строке хранится все записи, символ разделитель - ",":
-# Фамилия_1,Имя_1,Телефон_1,Описание_1
-# Фамилия_2,Имя_2,Телефон_2,Описание_2
-# и т.д.
+def outputing_all_data(path):
+    file = codecs.open(path, 'r', 'utf-8')
+    lines = file.readlines()
+    file.close()
+    [print(line) for line in lines]
+    logger.info('was outputing all data to concole from file by path: ' + path)
 
-
-def import_data():
-
-
-def export_data():
-
-# this method delete string from specify file by element of string
-def delete_string(element, path):
-    file = open(path, 'r')
-    list_strings = file.readlines()
-    file2 = open(path, 'w')
-    
-    array = [line.split(',') for line in list_strings]
-    [file2.write((','.join(i))) for i in array if not(i.__contains__(element))]
-
-    file.close 
-    file2.close  
-
-
-# this method search string from specify file by element of string
-# and output to console
-def search_by(string, path):
-    file = open(path, 'r')
-    list_strings = file.readlines()
-    array = [line.split(',') for line in list_strings]
-    [print(','.join(i)) for i in array if i.__contains__(string)]
-  
-    file.close        
-
-
-# method outputting a containment from specify file except strings with specify element of string
-def filter(string, path):
-    file = open(path, 'r')
-    list_strings = file.readlines()
-    array = [line.split(',') for line in list_strings]
-    [print(','.join(i)) for i in array if not(i.__contains__(string))]    
-    file.close
-
-# search_by('Egor', 'file.txt')
-# delete_string('Vasilisa', 'file.txt')
-# filter('Angelina', 'file.txt')

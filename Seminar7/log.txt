@@ -1,0 +1,2 @@
+[2022-10-19 19:26:37.589077] debug: inputting data
+[2022-10-19 19:26:37.590080] debug: write data to file Seminar7/format1.txt

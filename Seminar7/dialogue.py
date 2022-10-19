@@ -1,38 +1,16 @@
-def choose_format():
-    # print()
-    choose = int(input('Choose a format - how to write data:\n 1. Vertical\n 2. Horizontal\n'))
-    return choose
+import codecs
+import logic
 
-def inputing_data():
-    data = []
-    data.append(input('input first_name ='))
-    data.append(input('input last_name ='))
-    data.append(input('input patronymic ='))
-    data.append(input('input description ='))
-    return data    
+def start():
+    action = request_action()
+    if action == 1:
+        logic.write_data_to_file()
+    elif action == 2:
+        logic.outputing_all_data(input('input path to file = '))
 
-def write_data_to_file():
-    format = choose_format()
-    data = inputing_data()
-    
-    if format == 1:
-        file = open('Seminar7/format1.txt', 'a')
-        [file.write(i + '\n') for i in data]
-        file.write('\n')
-    elif format == 2:
-        file = open('format2.txt', 'a')
-        file.write(','.join(data))
-        file.write('\n')
-    file.close
+def request_action():
+    return int(input('enter 1 for inputing data to file or enter 2 for write data from file to concole\n'))
 
-# choose_format()
-# inputing_data()
-# write_data_to_file()
+def request_path():
+    return input('input path to file')    
 
-
-# def a():
-#     file = open('format1.txt', 'w')
-#     file.write('geas')
-#     file.close
-
-# a()

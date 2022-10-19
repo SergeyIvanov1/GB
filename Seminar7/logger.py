@@ -1,31 +1,32 @@
 import datetime
+import codecs
 
 def info(string):
-    file = open('log.txt', 'w')
-    file.write('[' + str(datetime.datetime.now()) + '] ' + 'debug: ' + string)
-    file.close
+    file = codecs.open('Seminar7/log.txt', 'a', 'utf-8')
+    file.write('[' + str(datetime.datetime.now()) + '] ' + 'debug: ' + string + '\n')
+    file.close()
 
 def debug(string):
-    file = open('log.txt', 'w')
-    file.write('[' + str(datetime.datetime.now()) + '] ' + 'info: ' + string)
-    file.close
+    file = codecs.open('Seminar7/log.txt', 'a', 'utf-8')
+    file.write('[' + str(datetime.datetime.now()) + '] ' + 'info: ' + string + '\n')
+    file.close()
 
 def warn(string):
-    file = open('log.txt', 'w')
-    file.write('[' + str(datetime.datetime.now()) + '] ' + 'warn: ' + string)
-    file.close
+    file = codecs.open('Seminar7/log.txt', 'a', 'utf-8')
+    file.write('[' + str(datetime.datetime.now()) + '] ' + 'warn: ' + string + '\n')
+    file.close()
 
 def exception(string):
-    file = open('log.txt', 'w')
-    file.write('[' + str(datetime.datetime.now()) + '] ' + 'debug: ' + string)
-    file.close
+    file = codecs.open('Seminar7/log.txt', 'a', 'utf-8')
+    file.write('[' + str(datetime.datetime.now()) + '] ' + 'debug: ' + string + '\n')
+    file.close()
 
 def error(string):
-    file = open('log.txt', 'w')
-    file.write('[' + str(datetime.datetime.now()) + '] ' + 'error: ' + string)
-    file.close    
+    file = codecs.open('Seminar7/log.txt', 'a', 'utf-8')
+    file.write('[' + str(datetime.datetime.now()) + '] ' + 'error: ' + string + '\n')
+    file.close()    
 
 def critical(string):
-    file = open('log.txt', 'w')
-    file.write('[' + str(datetime.datetime.now()) + '] ' + 'critical: ' + string)
-    file.close
+    file = codecs.open('Seminar7/log.txt', 'a', 'utf-8')
+    file.write('[' + str(datetime.datetime.now()) + '] ' + 'critical: ' + string + '\n')
+    file.close()
