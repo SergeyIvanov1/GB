@@ -7,11 +7,11 @@ def choose_format():
 
 def inputing_data():
     data = []
-    data.append(input('input last_name = '))
-    data.append(input('input first_name = '))
-    data.append(input('input patronymic = '))
-    data.append(input('input description = '))
-    logger.info('inputting data')
+    data.append(input('Input last_name = '))
+    data.append(input('Input first_name = '))
+    data.append(input('Input patronymic = '))
+    data.append(input('Input description = '))
+    logger.info('Inputting data')
     return data    
 
 def write_data_to_file():
@@ -24,12 +24,12 @@ def write_data_to_file():
         file = codecs.open(path1, 'a', 'utf-8')
         [file.write(i + '\n') for i in data]
         file.write('\n')
-        logger.info('write data to file ' + path1)
+        logger.info('Write data to file ' + path1)
     elif format == 2:
         file = codecs.open(path2, 'a', 'utf-8')
         file.write(','.join(data))
         file.write('\n')
-        logger.info('write data to file ' + path2)
+        logger.info('Write data to file ' + path2)
     file.close()
 
 def outputing_all_data(path):
@@ -37,5 +37,5 @@ def outputing_all_data(path):
     lines = file.readlines()
     file.close()
     [print(line) for line in lines]
-    logger.info('was outputing all data to concole from file by path: ' + path)
+    logger.info('Was outputing all data to concole from file by path: ' + path)
 

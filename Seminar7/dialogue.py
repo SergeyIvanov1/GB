@@ -9,8 +9,8 @@ def start():
         logic.outputing_all_data(input('input path to file = '))
 
 def request_action():
-    return int(input('enter 1 for inputing data to file or enter 2 for write data from file to concole\n'))
+    return int(input('Enter 1 for inputing data to file or enter 2 for write data from file to concole\n'))
 
 def request_path():
-    return input('input path to file')    
+    return input('Input path to file =')    
 
