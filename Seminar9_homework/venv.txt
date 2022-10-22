@@ -1,0 +1,6 @@
+py -m venv .folder
+.folder\Scripts\activate
+pip install isOdd
+python.exe -m pip install --upgrade pip 
+pip freeze > requirements.txt 
+deactivate
