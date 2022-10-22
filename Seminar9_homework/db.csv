@@ -1,0 +1,15 @@
+������, 1738730510, /hi
+������, 1738730510, /time
+[2022-10-22 17:06:19.587194] first_name = Сергей, id = 1738730510, text = /hi
+[2022-10-22 17:06:22.350805] first_name = Сергей, id = 1738730510, text = /time
+[2022-10-22 17:06:24.528490] first_name = Сергей, id = 1738730510, text = /help
+[2022-10-22 17:06:34.995042] first_name = Сергей, id = 1738730510, text = /sum 12 20
+[2022-10-22 17:38:27.590281] first_name = Evgeniy, id = 1464249273, text = /help
+[2022-10-22 17:38:33.225860] first_name = Evgeniy, id = 1464249273, text = /sum
+[2022-10-22 17:38:46.327033] first_name = Evgeniy, id = 1464249273, text = /sum 12 34
+[2022-10-22 17:41:25.010493] first_name = Evgeniy, id = 1464249273, text = /time
+[2022-10-22 17:41:58.377714] first_name = Evgeniy, id = 1464249273, text = /hi
+[2022-10-22 17:45:10.259473] first_name = Evgeniy, id = 1464249273, text = /hi
+[2022-10-22 17:45:10.368852] first_name = Evgeniy, id = 1464249273, text = /time
+[2022-10-22 17:45:10.482127] first_name = Evgeniy, id = 1464249273, text = /help
+[2022-10-22 17:45:18.138638] first_name = Evgeniy, id = 1464249273, text = /time
