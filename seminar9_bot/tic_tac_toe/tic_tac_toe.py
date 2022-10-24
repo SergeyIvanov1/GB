@@ -67,4 +67,3 @@ if __name__ == '__main__':
     symbols = get_data()
     
     main(field, symbols)
-
